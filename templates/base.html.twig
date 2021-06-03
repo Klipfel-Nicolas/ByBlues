@@ -7,7 +7,6 @@
 		<title>
 			{% block title %}Projet 3 Name{% endblock %}
 		</title>
-
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
 		{% endblock %}
@@ -17,6 +16,7 @@
 		{% endblock %}
 	</head>
 	<body>
+	{% include 'navBar.html.twig' %}
 		{% block body %}{% endblock %}
 	</body>
 </html>

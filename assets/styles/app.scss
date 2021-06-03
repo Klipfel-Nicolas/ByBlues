@@ -1,6 +1,11 @@
+@import 'class.scss';
 @import 'variables.scss';
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
+// GENERAL
 body {
-    background-color: $blue-light;
+    background-color: $blue-dark;
+    h1 {
+        color: #ffff;
+    }
 }

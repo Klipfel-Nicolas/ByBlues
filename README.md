@@ -1,4 +1,15 @@
-# Project 3 Bye Blues*
+# Project 3 Bye Blues
+
+Projet pour une start-up Strasbourgeoise.
+
+## Description
+
+Le projet site est composé : 
+- D'une page de présentation du projet et du produit
+- D'un blog afin de partager des articles scientifiques ou sociologiques
+- D'une boutique en ligne pour commander le produits
+- D'une partie Admin
+- D'un système d'authentification sign-in, log-in/log-out
 
 
 ## Construit avec

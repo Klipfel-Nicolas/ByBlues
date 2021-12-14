@@ -1,0 +1,33 @@
+{% extends "admin/baseAdmin.html.twig" %}
+
+{% block title %} {{ parent() }} - Commande n° {% endblock title %}
+
+{% block body %}
+    <h1 class="text-center">{% trans %}Détails de la commande n °{% endtrans %}{{ order.id }}</h1>
+
+    <table class="wrapper border border-2 py-3">
+        <thead>
+            <tr class="text-uppercase text-center">
+                <th>{% trans %}Utilisateur{% endtrans %}</th>
+                <th>{% trans %}Objets achetés{% endtrans %}</th>
+                <th>{% trans %}Prix total{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center py-3 px-5">{{ user.email }} </td>
+                <td class="text-center py-3 px-5">
+                    {% for item in items %}
+                    - <a href="{{ path('item_show', {id: item.id}) }}">{{ item.name }}</a><br>
+                    {% endfor %}
+                </td>
+                <td class="text-center">{{ order.totalPrice }}</td>
+                <td class="d-flex justify-content-center">
+                    <a class="d-block my-2 mx-2 text-center btn btn-warning">{% trans %}Modifier{% endtrans %}</a>
+                    {{ include('admin/order/_delete_form.html.twig') }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock body %}

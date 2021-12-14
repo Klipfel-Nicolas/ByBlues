@@ -1,9 +1,49 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
-    {{ parent() }} - Shop
-{% endblock %}
+{% block title %} {{ parent() }} - {% trans %}Boutique {% endtrans %}{% endblock %}
 
 {% block body %}
+    <div class="wrapper shop">
+        {% for item in items %}
+            <article class="wrapper d-flex my-5 py-5 flex-md-row-reverse justify-content-center flex-column-reverse">
+                <div class="d-flex flex-column justify-content-around m-1 p-md-4 col-md-6">
+                    <h1 class="fs-1 text-uppercase text-md-start text-center">
+                        {{ item.name }}
+                    </h1>
+
+                    <div class="my-5 my-md-0">
+                        {{ item.description }}
+                    </div>
+
+                    <div class="d-flex flex-md-row-reverse flex-column justify-content-between">
+                        <p class="fs-4 mb-0">Prix : {{ item.price }} €</p>
+                        <a class="btn btn-warning" href="{{ path('user_item_add', {'id': item.id}) }}">{% trans %}Ajouter{% endtrans %}</a>
+                    </div>
+
+                </div>
+
+                <div class="d-flex">
+
+                    <div class="grid-image pe-md-3 col-3">
+                        {% for image in images %}
+                            {% if image.item == item %}
+                                <img class="p-md-3 p-1 mini-image" src="/uploads/items/{{ image.path }}" alt="image {{ item.name }}">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    {% for image in images %}
+                        {% if image.item == item and image.imagePlace == 1 %}
+                            <div class="big-image align-self-end align-self-md-center">
+                                <img class="img-md-fluid" src="/uploads/items/{{ image.path }}" alt="image {{ item.name }}">
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+            </article>
+        {% endfor %}
+    </div>
 
 {% endblock %}
+

@@ -1,0 +1,55 @@
+<footer class="border-T wrapper">
+    <div>
+        <div class="text-center mt-3">
+            <img src="{{ asset('upload/byeblues-noir.png') }}" width="170">
+        </div>
+
+        <div class="d-flex justify-content-around flex-md-row flex-column">
+
+            <div class="w-md-50 text-center my-3">
+                <p>Abonnez-vous à la newsletter :</p>
+
+                <div class="input-group w-100 mx-auto">
+                    <input type="text" class="form-control bg-transparent" placeholder="Veuillez renseigner votre e-mail" aria-label="Veuillez renseigner votre e-mail" aria-describedby="button-addon2">
+                    <button class="btn btn-custom " type="button" id="button-addon2">Envoyer</button>
+                </div>
+            </div>
+
+            <div class="w-md-50 text-center my-3">
+                <p>Vous avez des questions ?</p>
+                <a class="btn-full" href="{{ path('send_mail_contact') }}">{% trans %}Contacter nous{% endtrans %}</a>
+            </div>
+
+            <div class="w-md-50 text-center my-3 mx-auto mx-md-0">
+                <p>Suivez-nous : </p>
+
+                <ul class="d-flex justify-content-center socialNetwork p-0">
+                    <li class="px-2">
+                        <a href="#"><img src="/upload/socialNetwork/facebook.png" alt="logo-facebook"></a>
+                    </li>
+                    <li class="px-2">
+                        <a href="#"><img src="/upload/socialNetwork/twitter.png" alt="logo-twitter"></a>
+                    </li>
+                    <li class="px-2">
+                        <a href="#"><img src="/upload/socialNetwork/instagram.png" alt="logo-instagram"></a>
+                    </li>
+                    <li class="px-2">
+                        <a href="#"><img src="/upload/socialNetwork/linkedin.png" alt="logo-linkedin"></a>
+                    </li>
+                    <li class="px-2">
+                        <a href="#"><img src="/upload/socialNetwork/youtube.png" alt="logo-youtube"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <p class="my-5 text-center">
+            {% trans %}
+                Site réalisé à l'aide de la Wild Code School de Strasbourg.
+                Pour notre client "Bye Blues". Avec la participation de Paul.
+                Copyright © 2021 Bye Blues - Tous droits réservés.
+            {% endtrans %}
+        </p>
+    </div>
+</footer>

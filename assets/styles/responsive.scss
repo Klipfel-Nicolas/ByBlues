@@ -1,0 +1,37 @@
+@media screen and (max-width: 768px) {
+    
+    //widgetBar
+    .widgetBar {
+        display: none !important;
+    }
+
+    .shop {
+        
+        article{
+            height: auto;
+
+            img {
+                height: auto;
+            }
+
+            .big-image {
+                max-width: auto;
+            }
+        }
+    }
+
+    .blog {
+        article {
+            flex-direction: column-reverse !important;
+        }
+    }
+
+    //LOGIN MODAL
+    #loginModal{
+        .modal-content {
+            height: 70vh;
+            margin-top: 15vh;
+        }
+    }
+
+}

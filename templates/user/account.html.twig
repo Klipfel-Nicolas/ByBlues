@@ -1,0 +1,88 @@
+{% extends "base.html.twig" %}
+{% block title %} {{ parent() }} {{ app.user.firstname }} {% endblock title %}
+
+{% block body %}
+
+    <div class="wrapper account">
+
+        <h1 class="text-center my-5">{% trans %}Espace personnel{% endtrans %}</h1>
+
+        <div class="container d-md-flex align-items-center my-5">
+
+            <div class="image d-md-block d-none me-3">
+                <img class="img-fluid" src="/upload/notificationsOrange.svg" alt="image profil">
+            </div>
+
+            <div class="my-5 col-md-8">
+
+                <div class="container my-5">
+                    <div class="row ">
+                        <h2 class="pe-4 col-md-5 col-10 fs-1">Informations </h2>
+
+                        <ul class="d-flex flex-column m-0 ps-4 col-md-5">
+                            <li>{{ app.user.firstname }}</li>
+                            <li>{{ app.user.lastname }}</li>
+                            <li>{{ app.user.email }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <h2 class="pe-4 col-md-5 fs-1">Adresse</h2>
+
+                        <ul class="d-flex flex-column m-0 ps-4 col-md-5">
+                        {% if app.user.adress1 == "" %}
+                            <li>{% trans %}Vous n'avez pas encore d'adresse de renseignée{% endtrans %}</li>
+                        {% else %}
+                            <li>{{ app.user.adress1 }}</li>
+                            <li>{{ app.user.adress2 }}</li>
+                        {% endif %}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="my-5 container">
+                    <div class="row">
+                        <div class="line col-5"></div>
+                        <div class="col-5 ps-4 ">
+                            <a class="btn-full" href="{{ path('user_edit_user', {slug: app.user.slug}) }}">{% trans %}Modifier{% endtrans %}</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container d-flex align-items-center my-5">
+            <div class="my-5 col-8">
+
+                <div class="container my-5">
+                    <div class="row ">
+                        <h2 class="pe-4 col-md-5 col-10 fs-1">commandes</h2>
+
+                        <ul class="d-flex flex-column m-0 ps-4 col-md-5">
+
+                            {% if orders %}
+                                {% for order in orders %}
+                                    <li>
+                                        Commande du : <a href="{{ path('ordersPlacedShow', {id: order.id}) }}" class="colorOrange">{{ order.createdAt|date("d/m/Y") }}</a>
+                                    </li>
+                                {% endfor %}
+                            {% else %}
+                                <li class="text-center py-3">Pas encore de commandes ?</li>
+                                <li class="text-center"> Venez visiter notre </li>
+                                <li class="text-center py-3"><a class="btn-full py-2 " href="{{ path("shop_index") }}">{% trans %}Boutique{% endtrans %}</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image me-3 d-md-block d-none">
+                <img class="img-fluid" src="/upload/order.svg" alt="image profil">
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+    <article class="wrapper">
+
+        <h2 class="my-md-5 my-5">{{ article.title }}</h2>
+
+        <div class="metadata secondaryText my-md-5">{% trans %}Crée le {% endtrans %} {{ article.createdAt|date('d-m-Y') }}</div>
+
+        <div class="content clearfix">
+
+            <img src="/uploads/{{ article.poster }}" alt="image article" class="col-md-7 float-md-start col-12 p-4">
+
+            <p class="m-md-4 p-4 lh-6">
+                {{ article.content }}
+            </p>
+
+        </div>
+
+        <div class="my-5 text-end p-5">
+            <a class="colorOrange " href="{{ path('blog') }}">{% trans %} Retour à la liste {% endtrans %}</a>
+        </div>
+
+    </article>
+{% endblock %}
+
+

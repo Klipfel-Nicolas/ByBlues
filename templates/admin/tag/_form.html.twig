@@ -1,0 +1,10 @@
+{{ form_start(form) }}
+
+    {{ form_label(form.intitule, "Intitulé du tag", {'label_attr': {'class': 'd-block mx-auto text-center w-25'}}) }}
+    {{ form_widget(form.intitule, {'attr': {'class': 'd-block mx-auto form-control text-center w-25 my-3'}}) }}
+
+    <div class="d-block text-center my-3">
+        <button class="btn btn-warning">{{ button_label|default('Ajouter') }}</button>
+    </div>
+
+{{ form_end(form) }}

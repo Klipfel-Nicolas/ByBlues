@@ -1,0 +1,22 @@
+{{ form_start(form) }}
+    {{ form_label(form.email, "Email de l'utilisateur", {'label_attr': {'class': 'd-block mx-auto text-center w-25'}}) }}
+    {{ form_widget(form.email, {'attr': {'class': 'd-block mx-auto form-control text-center w-25 my-3'}}) }}
+
+    {{ form_label(form.firstName, "Prénom de l'utilisateur", {'label_attr': {'class': 'd-block mx-auto text-center w-25'}}) }}
+    {{ form_widget(form.firstName, {'attr': {'class': 'd-block mx-auto form-control text-center w-25 my-3'}}) }}
+
+    {{ form_label(form.lastName, "Nom de l'utilisateur", {'label_attr': {'class': 'd-block mx-auto text-center w-25 my-1'}}) }}
+    {{ form_widget(form.lastName, {'attr': {'class': 'd-block mx-auto form-control text-center w-25 my-3'}}) }}
+
+    {{ form_label(form.adress1, "Addresse n°1", {'label_attr': {'class': 'd-block mx-auto text-center w-25 my-1'}}) }}
+    {{ form_widget(form.adress1, {'attr': {'class': 'd-block mx-auto form-control text-center w-25 my-3'}}) }}
+
+    {{ form_label(form.adress2, "Addresse n°2", {'label_attr': {'class': 'd-block mx-auto text-center w-25 my-3'}}) }}
+    {{ form_widget(form.adress2, {'attr': {'class': ' mx-auto form-control text-center w-25'}}) }}
+
+    {{ form_label(form.roles, "Role de l'utilisateur", {'label_attr': {'class': 'd-block mx-auto text-center w-25 my-3'}}) }}
+    {{ form_widget(form.roles, {'attr': {'class': ' mx-auto form-control text-center w-25'}}) }}
+    <div class="d-block text-center my-3">
+        <button class="btn btn-warning">{{ button_label|default('Ajouter') }}</button>
+    </div>
+{{ form_end(form) }}

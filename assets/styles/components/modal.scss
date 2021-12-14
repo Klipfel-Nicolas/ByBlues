@@ -1,0 +1,11 @@
+.modal-content {
+    border: 10px solid $white !important;
+    border-radius: 25px !important;
+
+    input,
+    input:focus {
+        color: $white !important;
+        background-color: $blue-dark;
+    }
+}
+

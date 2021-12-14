@@ -1,0 +1,64 @@
+{% set route_name = app.request.attributes.get('_route') %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-info bg-transparent sticky-top">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="/"><img src="/upload/byeblues.png" alt="logo bye blues" width="150" ></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse  justify-content-end fs-5" id="navbarNav">
+      <ul class="navbar-nav text-center">
+      {% if isAdmin(app.user) %}
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{ path('admin_index') }}">{% trans %}Page admin{% endtrans %}</a>
+        </li>
+      {% endif %}
+
+      <li {% if route_name matches '{^product}' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+        <a class="nav-link" aria-current="page" href="{{ path('product') }}">Notre solution</a>
+      </li>
+
+        <li {% if route_name matches '{^about}' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+          <a class="nav-link" href="{{ path('about') }}">{% trans %}A Propos{% endtrans %}</a>
+        </li>
+
+        <li {% if route_name matches '{^blog}' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+          <a class="nav-link" aria-current="page" href="{{ path('blog') }}">{% trans %}Blog{% endtrans %}</a>
+        </li>
+
+        <li {% if route_name matches '{^shop}' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+          <a class="nav-link" href="{{ path('shop_index') }}">{% trans %}Boutique{% endtrans %}</a>
+        </li>
+
+      {% if app.user %}
+          <li {% if route_name matches '{^user_account}' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+
+              <a class="nav-link" aria-current="page" href="{{ path('user_account', {'slug': app.user.slug}) }}">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 512 512" width="512" height="512">
+                  <path d="M68.169,447.023C71.835,449.023,159.075,496,256,496c105.008,0,184.772-47.134,188.116-49.14A8,8,0,0,0,448,
+                  440c0-64.593-19.807-123.7-55.771-166.442-25.158-29.9-56.724-50.28-91.539-59.662a104,104,0,1,0-89.38,0c-34.815,
+                  9.382-66.381,29.765-91.539,59.662C83.807,316.3,64,375.407,64,440A8,8,0,0,0,68.169,447.023ZM168,120a88,88,0,1,1,88,
+                  88A88.1,88.1,0,0,1,168,120ZM132.013,283.859C164.5,245.258,208.528,224,256,224s91.5,21.258,123.987,59.859c32.681,38.838,
+                  51.056,92.48,51.977,151.474C414.845,444.6,343.708,480,256,480c-81.11,0-157.5-35.609-175.96-44.856C81,376.223,99.367,322.656,
+                  132.013,283.859Z"/>
+                </svg>
+
+              </a>
+
+          </li>
+      {% endif %}
+
+        {% if app.user %}
+          <button type="button" class="btn-danger-custom"><a href="{{ path('app_logout') }}">{% trans %}Deconnexion{% endtrans %}</a></button>
+        {% else %}
+          <button type="button" class="btn-custom" data-bs-toggle="modal" data-bs-target="#loginModal">
+              {% trans %}connexion{% endtrans %}
+          </button>
+        {% endif %}
+
+      </ul>
+    </div>
+  </div>
+</nav>

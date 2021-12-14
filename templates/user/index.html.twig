@@ -1,9 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
-    {{ parent() }} - Mon Compte
-{% endblock %}
+{% block title %} {{ parent() }} -{% trans %} Mon compte {% endtrans %}{% endblock %}
 
 {% block body %}
+    {% if user.roles is defined %}
+
+        <h1> test défini </h1>
+    {% else %}
+        <h1> {% trans %}Vous n'êtes pas connecté {% endtrans %}</h1>
+        <p> {% trans %}Pour créer un compte cliquez ici {% endtrans %}=> <a href="{{ path('user_createAccount') }}"> {% trans %}Créer mon compte {% endtrans %}</a></p>
+        <p> {% trans %}Pour créer un compte cliquez ici {% endtrans %}=> <a href="{{ path('user_loginUser') }}">{% trans %} Se connecter {% endtrans %}</a></p>
+    {% endif %}
+
+    <ul>
+        {% if app.user %}
+            <button type="button" class="btn btn-danger"><a href="{{ path('app_logout') }}">{% trans %}Deconnexion{% endtrans %}</a></button>
+        {% else %}
+            <button type="button" class="btn btn-success"><a href="{{ path('app_login') }}">{% trans %}Connexion{% endtrans %}</a></button>
+            <button type="button" class="btn btn-info"><a href="{{ path('app_register') }}">{% trans %}Crée un compte{% endtrans %}</a></button>
+        {% endif %}
+    </ul>
+</div>
 
 {% endblock %}

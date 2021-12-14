@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %} {{ parent() }} {% endblock title %}
+
+{% block body %}
+
+    {{ form_start(formUser) }}
+
+    {{ form_row(formUser.firstname, {'attr': {'placeholder': "Votre prénom"}}) }}
+    {{ form_row(formUser.lastname, {'attr': {'placeholder': "Votre Nom"}}) }}
+    {{ form_row(formUser.email, {'attr': {'placeholder': "Votre email"}}) }}
+    {{ form_row(formUser.password, {'attr': {'placeholder': "Votre mot de passe"}}) }}
+
+    <button type="submit" class="btn btn-succes">
+    S'enregistrer
+    </button>
+    {{ form_end(formUser) }}
+
+{% endblock body %}

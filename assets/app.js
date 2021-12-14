@@ -9,6 +9,22 @@
 import './styles/app.scss';
 
 // Bootsrap css framework
+
 import { Tooltip, Toast, Popover } from 'bootstrap';
+
 // start the Stimulus application
+
 import './bootstrap';
+
+// Ajax Request
+import './js/loginAjax';
+
+import './js/rating';
+// Shop script
+import './js/shop';
+
+// stars in the sky
+import './js/stars';
+
+// timeline about
+import './js/timeline';

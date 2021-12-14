@@ -1,0 +1,31 @@
+.shop{
+    
+    img{
+        border-radius: 15px;
+    }
+
+    article{
+        height: 80vh;
+        
+
+        .mini-image{
+            cursor: pointer;
+            border-radius: 25px;
+        }
+    }
+  
+    .grid-image{
+        display: grid;
+        grid-template-rows: repeat(4, 25%);
+    }
+}
+
+
+.panier{
+    min-height: 70vh;
+}
+
+.payment,
+.order{
+    min-height: 70vh;
+}

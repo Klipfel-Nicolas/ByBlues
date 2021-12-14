@@ -1,0 +1,54 @@
+{% extends 'admin/baseAdmin.html.twig' %}
+
+{% block title %} {{ parent() }}- Utilisateurs {% endblock %}
+
+{% block body %}
+    <h1 class="text-center">{% trans %} Liste des utilisateurs inscrits {% endtrans %}</h1>
+<div class="wrapper">
+    <a class="btn btn-warning my-5 px-5" href="{{ path('admin_user_new') }}">{% trans %}Ajouter un nouvel utilisateur {% endtrans %}</a>
+</div>
+    <table class="wrapper border border-2">
+
+        <thead>
+            <tr class="text-uppercase text-center">
+                <th>{% trans %}Email{% endtrans %}</th>
+                <th>{% trans %}Prénom{% endtrans %}</th>
+                <th>{% trans %}Nom{% endtrans %}</th>
+                <th>{% trans %}Email Vérifié{% endtrans %}</th>
+                <th>{% trans %}Rôles{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr class="text-center">
+                <td>{{ user.email }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>
+                {% if user.isVerified == "Yes" %}
+                    <span class="text-success text-uppercase"> Yes </span>
+                {% else %}
+                    <span class="text-warning text-uppercase"> No </span>
+                {% endif %}
+                </td>
+                <td>
+                {% if user.roles == ["ROLE_USER"] %}
+                    {% trans %} Utilisateur {% endtrans %}
+                {% else %}
+                    <span class="text-danger text-uppercase">{% trans %} Administrateur {% endtrans %}</span>
+                {% endif %}
+                </td>
+                <td><a class="d-block my-2 mx-2 btn btn-primary" href="{{ path('admin_user_show', {id: user.id}) }}">{% trans %}Détails{% endtrans %}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+.blog{
+    article{
+        display: flex;
+        position: relative;
+        padding: 15% 1rem;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background-color: #ffffff;
+        }
+    }
+    article:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+}

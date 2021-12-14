@@ -1,0 +1,138 @@
+{% extends 'admin/baseAdmin.html.twig' %}
+
+{% block title %}
+  {{ parent() }}
+  - Administration
+{% endblock title %}
+
+{% block body %}
+  <h1 class="text-warning text-center">
+    {% trans %}
+    PAGE ADMIN
+    {% endtrans %}</h1>
+
+  <div class="row wrapper">
+    <div class="col-sm-6 py-5">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title text-dark text-center">{% trans %}
+            Blog/Article{% endtrans %}</h5>
+          <p class="card-text text-secondary text-center">{% trans %}Section permettant de voir tout les articles postés:
+            {% endtrans %}
+            <ul>
+              <li class="text-dark">{% trans %}
+                Vous pouvez les supprimer{% endtrans %}
+              </li>
+              <li class="text-dark">{% trans %}
+                Vous pouvez les éditer{% endtrans %}
+              </li>
+            </ul>
+          </p>
+          <a href="{{ path('admin_blog') }}" class="btn btn-warning">
+            {% trans %}
+            Voir page
+            {% endtrans %}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 py-5">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title text-dark text-center">{% trans %}
+            Produits{% endtrans %}</h5>
+          <p class="card-text text-secondary text-center">{% trans %}Section permettant de voir tout les produits disponibles aux utilisateurs
+            {% endtrans %}
+            <ul>
+              <li class="text-dark">{% trans %}
+                Vous pouvez les supprimer{% endtrans %}
+              </li>
+              <li class="text-dark">{% trans %}
+                Vous pouvez les éditer{% endtrans %}
+              </li>
+            </ul>
+          </p>
+          <a href="{{ path('admin_item') }}" class="btn btn-warning">
+            {% trans %}
+            Voir page
+            {% endtrans %}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 py-5">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title text-dark text-center">{% trans %}
+            Commandes{% endtrans %}</h5>
+          <p class="card-text text-secondary text-center">{% trans %}Section permettant de voir toutes les commandes passées sur le site
+            {% endtrans %}
+            <ul>
+              <li class="text-dark">{% trans %}
+                Vous pouvez les supprimer{% endtrans %}
+              </li>
+              <li class="text-dark">{% trans %}
+                Vous pouvez les éditer{% endtrans %}
+              </li>
+            </ul>
+          </p>
+          <a href="{{ path('admin_shop') }}" class="btn btn-warning">
+            {% trans %}
+            Voir page
+            {% endtrans %}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 py-5">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title text-dark text-center">{% trans %}
+            Utilisateurs
+            {% endtrans %}</h5>
+          <p class="card-text text-secondary text-center">{% trans %}Section permettant de voir tous les utilisateurs enregistrés
+            {% endtrans %}
+            <ul>
+              <li class="text-dark">{% trans %}
+                Vous pouvez les supprimer{% endtrans %}
+              </li>
+              <li class="text-dark">{% trans %}
+                Vous pouvez les éditer{% endtrans %}
+              </li>
+            </ul>
+          </p>
+          <a href="{{ path('admin_user') }}" class="btn btn-warning">
+            {% trans %}
+            Voir page
+            {% endtrans %}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 py-5">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title text-dark text-center">{% trans %}
+            Tags
+            {% endtrans %}</h5>
+          <p class="card-text text-secondary text-center">{% trans %}Section permettant de voir tous les tags disponibles pour les articles{% endtrans %}
+            <ul>
+              <li class="text-dark">{% trans %}
+                Vous pouvez les supprimer{% endtrans %}
+              </li>
+              <li class="text-dark">{% trans %}
+                Vous pouvez les éditer{% endtrans %}
+              </li>
+            </ul>
+          </p>
+          <a href="{{ path('admin_tag') }}" class="btn btn-warning">
+            {% trans %}
+            Voir page
+            {% endtrans %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock body %}

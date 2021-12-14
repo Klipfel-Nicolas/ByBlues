@@ -1,0 +1,22 @@
+{{ form_start(form) }}
+    {{ form_label(form.title, 'Titre de l\'article', {'label_attr': {'class': 'd-block mx-auto text-center w-25'}}) }}
+    {{ form_widget(form.title, {'attr': {'class': 'd-block mx-auto form-control text-center w-25 my-3'}}) }}
+
+    {{ form_label(form.posterFile, "Image pour l'article ", {'label_attr': {'class': 'd-block mx-auto text-center w-25'}}) }}
+    {{ form_widget(form.posterFile, {'attr': {'class': 'd-block mx-auto form-control text-center w-25 my-3'}}) }}
+
+
+    {% if article %}
+        <div>
+            <img class="d-block mx-auto" src="/uploads/{{ article.poster }}">
+        </div>
+    {% endif %}
+
+    {{ form_label(form.content, "Contenu de l'article ", {'label_attr': {'class': 'd-block mx-auto text-center w-25 my-1'}}) }}
+    {{ form_widget(form.content) }}
+
+    {{ form_label(form.tags, "Tag pour l'article", {'label_attr': {'class': 'd-block mx-auto text-center w-25 my-3'}}) }}
+    {{ form_widget(form.tags, {'attr': {'class': ' mx-auto form-control text-center w-25 text-danger'}}) }}
+
+    <input class="d-block btn btn-warning mx-auto my-4" type='submit' value='{% trans %} Valider{% endtrans %} '>
+{{ form_end(form) }}

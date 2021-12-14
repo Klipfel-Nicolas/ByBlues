@@ -1,0 +1,34 @@
+<div class="formReview ">
+    {{ form_start(form) }}
+
+            <div class='rating-stars'>
+                <p>Evaluer la prestations :</p>
+                    <div class="rating">
+
+                        <input type="radio" name="rate" id="s5" value="5">
+                        <label for="s5">★</label>
+
+                        <input type="radio" name="rate" id="s4" value="4">
+                        <label for="s4">★</label>
+
+                        <input type="radio" name="rate" id="s3" value="3">
+                        <label for="s3">★</label>
+
+                        <input type="radio" name="rate" id="s3" value="3">
+                        <label for="s3">★</label>
+                        
+                        <input type="radio" name="rate" id="s2" value="2">
+                        <label for="s2">★</label>
+
+                        <input type="radio" name="rate" id="s1" value="1">
+                        <label for="s1">★</label>
+
+                    </div>
+            </div>
+
+        {{ form_label(form.review, 'Commentaire', {'label_attr': {'class': 'form-label mt-4'}}) }}
+        {{ form_widget(form.review, {'label': 'Commentaire', 'attr': {'placeholder': 'Votre commentaire ...', 'class': 'bg-transparent form-control'}}) }}
+        
+        <button class="btn-custom py-2 my-5" id="btn">Ajoutez</button>
+    {{ form_end(form) }}
+</div>

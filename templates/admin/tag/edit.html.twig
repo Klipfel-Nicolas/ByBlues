@@ -1,0 +1,14 @@
+{% extends 'admin/baseAdmin.html.twig' %}
+
+{% block title %} {{ parent() }} {% trans %}Edition Tags {% endtrans %} {% endblock %}
+
+{% block body %}
+    <h1 class="text-center">{% trans %}Modifier un tag{% endtrans %}</h1>
+
+    {{ include('admin/tag/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+    <div class="d-flex justify-content-center">
+        <a class="btn btn-primary" href="{{ path('admin_tag') }}">{% trans %} Retour à la liste des tags {% endtrans %}</a>
+    </div>
+    {{ include('admin/tag/_delete_form.html.twig') }}
+{% endblock %}

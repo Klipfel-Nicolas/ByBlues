@@ -1,43 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ruleset name="PHPMD rule set"
-    xmlns="http://pmd.sf.net/ruleset/1.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
-    http://pmd.sf.net/ruleset_xml_schema.xsd"
-    xsi:noNamespaceSchemaLocation="
-    http://pmd.sf.net/ruleset_xml_schema.xsd"
->
-    <rule ref="rulesets/cleancode.xml" >
-        <exclude name="ElseExpression" />
-        <exclude name="StaticAccess" />
-    </rule>
-    <rule ref="rulesets/codesize.xml" >
-        <exclude name="TooManyFields" />
-    </rule>
-    <rule ref="rulesets/codesize.xml/TooManyFields" >
-        <properties>
-            <property name="maxfields" value="20" />
-        </properties>
-    </rule>
-    <rule ref="rulesets/controversial.xml" >
-        <exclude name="Superglobals" />
-    </rule>
-    <rule ref="rulesets/design.xml/CouplingBetweenObjects">
-        <properties>
-            <property name="maximum" value="20" />
-        </properties>
-    </rule>
-    <rule ref="rulesets/naming.xml" >
-        <exclude name="ShortVariable" />
-    </rule>
-    <rule ref="rulesets/naming.xml/ShortVariable">
-        <properties>
-            <property name="exceptions" value="id,qb" />
-        </properties>
-    </rule>
-    <rule ref="rulesets/unusedcode.xml" >
-        <exclude name="UnusedFormalParameter" />
-    </rule>
-    <exclude-pattern>src/Migrations</exclude-pattern>
-    <exclude-pattern>src/Kernel.php</exclude-pattern>
+<ruleset name="PHPMD rule set" xmlns="http://pmd.sf.net/ruleset/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+    http://pmd.sf.net/ruleset_xml_schema.xsd" xsi:noNamespaceSchemaLocation="
+    http://pmd.sf.net/ruleset_xml_schema.xsd">
+  <rule ref="rulesets/cleancode.xml">
+    <exclude name="ElseExpression"/>
+    <exclude name="StaticAccess"/>
+  </rule>
+  <rule ref="rulesets/codesize.xml">
+    <exclude name="TooManyFields"/>
+  </rule>
+  <rule ref="rulesets/codesize.xml/TooManyFields">
+    <properties>
+      <property name="maxfields" value="20"/>
+    </properties>
+  </rule>
+  <rule ref="rulesets/controversial.xml">
+    <exclude name="Superglobals"/>
+  </rule>
+  <rule ref="rulesets/design.xml/CouplingBetweenObjects">
+    <properties>
+      <property name="maximum" value="20"/>
+    </properties>
+  </rule>
+  <rule ref="rulesets/naming.xml">
+    <exclude name="ShortVariable"/>
+  </rule>
+  <rule ref="rulesets/naming.xml/ShortVariable">
+    <properties>
+      <property name="exceptions" value="id,qb"/>
+    </properties>
+  </rule>
+  <rule ref="rulesets/unusedcode.xml">
+    <exclude name="UnusedFormalParameter"/>
+  </rule>
+  <exclude-pattern>src/Migrations</exclude-pattern>
+  <exclude-pattern>src/Kernel.php</exclude-pattern>
+  <exclude-pattern>src/Controller/SecurityController.php</exclude-pattern>
+  <exclude-pattern>src/Controller/OrderController.php</exclude-pattern>
+  <exclude-pattern>src/Controller/AdminOrderController.php</exclude-pattern>
+  <exclude-pattern>src/Controller/ResetPasswordController.php</exclude-pattern>
+  <exclude-pattern>src/Entity/User.php</exclude-pattern>
+  <exclude-pattern>src/Entity/traits/Timer</exclude-pattern>
+  <exclude-pattern>src/Entity/Article.php</exclude-pattern>
+  <exclude-pattern>src/Entity/Image.php</exclude-pattern>
+  <exclude-pattern>src/Security/LoginFormAuthenicatorAuthenticator.php</exclude-pattern>
+  <exclude-pattern>src/Security/UserAuthenticator.php</exclude-pattern>
 </ruleset>

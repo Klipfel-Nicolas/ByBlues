@@ -1,0 +1,14 @@
+{% extends 'admin/baseAdmin.html.twig' %}
+
+{% block title %} {{ parent() }}- Utilisateurs {% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center">{% trans %}Créer un nouvel utilisateur{% endtrans %}</h1>
+
+    {{ include('admin/user/_form.html.twig') }}
+
+    <div class="d-flex justify-content-center">
+        <a class="d-inline my-2 mx-2 btn btn-primary" href="{{ path('admin_user_index') }}">{% trans %}Retour à la liste des utilisateurs{% endtrans %}</a>
+    </div>
+{% endblock %}

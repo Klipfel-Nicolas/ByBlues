@@ -1,0 +1,71 @@
+main.home{
+
+    h4
+    {
+        color: $blue-dark;
+    }
+
+    .hero p{
+        z-index: 3;
+        position: relative;
+    }
+
+    section.hero,
+    section.description{
+        min-height: 90vh;
+    }
+        
+    div.intro{
+        
+        h1{
+            color: $salmon;
+        }
+    }
+        
+    
+
+    div.svg {  
+        svg{
+            width: 100%;
+            height: auto;
+            fill-opacity: .5;
+        }
+    }
+
+    .hero div.svg svg path:nth-child(4),
+    .hero div.svg svg path:nth-child(6){
+        fill: $orange;
+        fill-opacity: 0;
+        animation: animSvg 5s ease forwards;
+    }
+    
+    
+    
+    .description div.svg svg path:nth-child(10){
+        fill: $orange;
+        fill-opacity: 1;     
+    }
+
+    @keyframes animSvg {
+        to {
+            stroke-dashoffset: 0;
+            fill-opacity: 1;
+        }
+    }
+
+    .support{
+        
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .newsletter{
+        
+        button{
+            background-color: $blue-dark;
+            color: $white;
+        }
+    }
+
+}

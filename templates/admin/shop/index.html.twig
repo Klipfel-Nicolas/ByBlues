@@ -1,0 +1,35 @@
+{% extends "admin/baseAdmin.html.twig" %}
+
+{% block title %} {{ parent() }} - Commande {% endblock title %}
+
+{% block body %}
+    <div class="wrapper">
+        <h1 class="text-center">{% trans %}Toutes les commandes passées{% endtrans %} </h1>
+    <table class="wrapper border border-2 py-3">
+        <thead>
+            <tr class="text-uppercase text-center">
+                <th>{% trans %}Commandes{% endtrans %}</th>
+                <th>{% trans %}Prix total{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+    <tbody>
+      {% for order_user in allUserOrder %}
+        <tr>
+          <td class="text-center py-3 px-5">
+            n° {{ order_user.id }}
+          </td>
+          <td class="text-center">
+            {{ order_user.totalPrice }} €
+          </td>
+          <td class="d-flex justify-content-center">
+             <a class="d-block my-2 mx-2 btn btn-primary" href="{{ path("admin_order_show_order_user", {"order": order_user.id, "user": order_user.user.id}) }}">{% trans %}Détails{% endtrans %}</a>
+             <a class="d-block my-2 mx-2 btn btn-warning">{% trans %}Modifier{% endtrans %}</a>
+            <a class="d-block my-2 mx-2 btn btn-danger">{% trans %}Supprimer{% endtrans %}</a>
+          </td>
+        </tr>
+      {% endfor %}
+      <tbody></table>
+    </div>
+
+{% endblock body %}

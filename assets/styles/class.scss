@@ -1,0 +1,126 @@
+.text-white {
+    color: $white;
+}
+
+.bg-darkBlue {
+    background-color: $blue-dark;
+}
+
+.bg-orange {
+    background-color: $orange;
+}
+
+.wrapper {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.absolute {
+    position: absolute;
+}
+
+//BTN
+.btn-custom {
+    padding: 0 15px;
+    border: 1px solid $orange;
+    background-color: transparent;
+    color: $orange;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    color:$salmon ;
+    border-color:$salmon ;
+}
+
+.btn-danger-custom {
+    padding: 0 15px;
+    border: 1px solid $red-pale;
+    background-color: transparent;
+    border-radius: 5px;
+
+    a {
+        color: $red-pale;
+    }
+}
+
+.btn-full{
+    background-color: $orange;
+    color: $blue-dark;
+    padding: 10px;
+}
+
+//FONT COLORS
+.colorOrange {
+    color: $orange;
+}
+
+.colorBlue{
+    color: #20293f;
+ }
+
+.secondaryText{
+    font-size: .8rem;
+    opacity: .5;
+}
+
+.admin{
+    background-image: url("../../public/upload/byBlues.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.border-T{
+    border-top: 1px solid $orange;
+}
+
+//STARS IN THE SKY 
+.starsSection{
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.sky-star {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate linear infinite;
+    z-index: 1;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+    }
+
+    10%,
+    90%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+//PAGINATION
+
+div.pagination {
+    justify-content: center;
+
+    span {
+        margin: 20px 5px;
+    }
+
+    span a {
+        color: $orange;
+        font-size: 1.3rem;
+    }
+
+    .current {
+        color: grey;
+        font-size: 1.3rem;
+    }
+}

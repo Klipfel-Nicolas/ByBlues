@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %} {{ parent() }} {% trans %} Mes commandes passées {% endtrans %} {% endblock title %}
+
+{% block body %}
+
+    <h1>{% trans %}Mes commandes passées{% endtrans %}</h1>
+    {% for order in orders %}
+    <div class="text-white">
+        <a href="{{ path('ordersPlacedShow', {id: order.id}) }}">{{ order.createdAt|date("M/d/Y") }}</a>
+        {{ order.id }}
+        <div>
+    {% endfor %}
+
+{% endblock body %}

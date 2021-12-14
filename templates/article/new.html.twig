@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvel article{% endblock %}
+
+{% block body %}
+    <h1>{% trans %}Créer un nouvel article{% endtrans %} </h1>
+
+    {{ include('article/_form.html.twig', {'button_label': 'Update'}) }}
+
+
+    <a class="btn btn-primary d-block mx-auto w-25" href="{{ path('admin_index') }}">{% trans %}Retour à la liste des articles{% endtrans %}</a>
+{% endblock %}

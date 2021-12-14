@@ -1,0 +1,38 @@
+{% extends 'admin/baseAdmin.html.twig' %}
+
+{% block title %} {{ parent() }} Tag index {% endblock %}
+
+{% block body %}
+<div class="wrapper admin">
+    <h1 class="text-center">{% trans %}Liste des tags disponibles{% endtrans %}</h1>
+
+    <table class="wrapper border border-2">
+        <thead>
+            <tr class="text-uppercase text-center">
+                <th>{% trans %}Intitulé{% endtrans %}</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tag in tags %}
+            <tr class="text-center">
+                <td class="py-3">{{ tag.intitule }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('admin_tag_showTag', {'id': tag.id}) }}">{% trans %}Voir{% endtrans %}</a>
+                    <a class="m-3 p-2 border border-warning rounded-1 btn-warning" href="{{ path('admin_tag_editTag', {'id': tag.id}) }}">{% trans %}Modifier{% endtrans %}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-center">
+        <a class="btn btn-warning my-3" href="{{ path('admin_tag_newTag') }}">{% trans %}Créer nouveau tag{% endtrans %}</a>
+    </div>
+</div>
+
+{% endblock %}

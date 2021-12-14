@@ -6,6 +6,17 @@ parameters:
     excludes_analyse:
         - src/DataFixtures
         - src/Security
+        - src/Entity
+        - src/Repository
+        - src/Services/Slugify.php
+        - src/Controller/HomeController.php
+        - src/Controller/SecurityController.php
+        - src/Controller/UserController.php
+        - src/Controller/ResetPasswordController.php
+        - src/Controller/UserReviewController.php
+        - src/Controller/RegistrationController.php
+        - src/Controller/AdminItemController.php
+        - src/Controller/OrderController.php
     ignoreErrors:
         - '#Call to an undefined method [a-zA-Z0-9\\_]+::findOneBy[A-Z][a-zA-Z]*\(\)#'
         - '#Call to an undefined method [a-zA-Z0-9\\_]+::findBy[A-Z][a-zA-Z]*\(\)#'

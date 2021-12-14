@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block title %} {{ parent() }} {% trans %} Paiment {% endtrans %} {% endblock title %}
+
+{% block body %}
+    <main class="wrapper payment">
+        <h1> page paiment </h1>
+        
+        <a href="{{ path('order_payment_accept') }}" class="colorOrange fs-2">{% trans %}Payer{% endtrans %}</a>
+    </main>
+{% endblock body %}

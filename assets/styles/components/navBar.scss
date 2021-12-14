@@ -1,0 +1,33 @@
+//NAV
+.navbar-dark .navbar-nav .nav-link {
+    color: $orange;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: $salmon;
+}
+
+.navbar-dark .navbar-nav .nav-item.active .nav-link {
+    color: rgba(255, 255, 255, .55);
+}
+
+nav{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+nav svg {
+    width: 30px;
+    height: auto;
+}
+
+nav svg:hover path {
+    fill: $salmon;
+}
+
+nav svg path {
+    fill: $orange;
+}
+
+.active svg path {
+    fill: rgba(255, 255, 255, .55);
+}

@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+{% block title %} {{ parent() }} Commande {% endblock title %}
+{% block body %}
+
+    <div class="panier wrapper">
+
+        <h1 class="my-5">{% trans %} Ma commande {% endtrans %}</h1>
+
+        <div class="col-md-8 col-10 mx-auto p-md-5 p-2 border border-warning border-2 rounded-3 my-5">
+
+            {% if elements|length == 0 %}
+
+                <p class="fs-4 text-center">Le panier est vide</p>
+
+            {% else %}
+
+                {% for element in elements %}
+                    <div class="container-sm mx-auto d-flex-column m-1 text-white ">
+                        <div class="border border-warning border-2 rounded-3 p-3 text-center my-5">
+                            {% trans %}Nom du produit{% endtrans %} :{{ element.item.name }} <br><br>
+                            {% trans %}Prix du produit{% endtrans %} :{{ element.item.price }} €<br><br>
+                            {% trans %}Description du produit{% endtrans %} :{{ element.item.description }}<br><br>
+                            {% trans %}Quantité{% endtrans %} :{{ element.quantity }}<br><br>
+                            {{ element.item.price * element.quantity }}
+                            <div>
+                                <a href="{{ path('user_item_remove', {'id': element.item.id}) }}" class="btn btn-danger">{% trans %} Supprimer{% endtrans %}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            {% endif %}
+            <p class ="text-white text-end text-decoration-underline">{% trans %} Total à payer : {% endtrans %} {{ app.session.get('totalPrice') }} €</p>
+
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-warning"><a href="{{ path('order_payment', {'id': app.user.id}) }}" class="colorBlue">{% trans %}Commander{% endtrans %}</a></button>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

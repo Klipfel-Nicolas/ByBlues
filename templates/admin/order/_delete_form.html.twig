@@ -1,0 +1,4 @@
+<form method="post" action="{{ path('admin_order_delete_order_user', {'id': order.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ order.id) }}">
+    <button class="d-inline mx-auto my-3 btn btn-danger">{% trans %}Supprimer{% endtrans %}</button>
+</form>

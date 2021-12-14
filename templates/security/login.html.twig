@@ -1,0 +1,31 @@
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-darkBlue border border-white">
+            <div class="modal-header w-75 mx-auto mb-md-5">
+                <h5 class="modal-title text-white mx-auto" id="exampleModalLabel">Connexion</h5>
+            </div>
+
+            <div class="modal-body w-75 mx-auto">
+
+                    <form method="post" action="/login" class="loginForm">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" value="" name="email" id="inputEmail" class="form-control bg-darkBlue border border-white border-1 mb-3 text-white" autocomplete="email" placeholder="votre email" required autofocus>
+
+                        <label for="inputPassword">Password</label>
+                        <input type="password" name="password" id="inputPassword" class="form-control bg-darkBlue border border-white border-1 mb-3 text-white" autocomplete="current-password" placeholder="Mot de passe" required>
+
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                        <div class="my-md-5 my-2 d-md-flex justify-content-between">
+                            <button class="btn btn-lg btn-danger submit" type="submit">
+                                Connexion
+                            </button>
+                            <a href="{{ path('app_register') }}" class=" d-md-inline d-block colorOrange">Pas encore de compte ?</a>
+                        </div>
+                    </form>
+                    <a href="{{ path('app_forgot_password_request') }}" class="mx-auto colorOrange text-center">Mot de passe oublié ?</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+// GENERAL
+
+* {
+    padding: 0;
+    margin: 0;
+    color: $white;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $blue-dark;
+
+}
+
+h1,
+p,
+label {
+    color: $white
+}
+
+th,
+td {
+    color: $white;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: $salmon;
+}
+
+input{
+    color: black;
+}
+
+ul.socialNetwork{
+
+    a{
+        opacity: .7;
+        transition: opacity .2s;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+//FORM 
+
+textarea.form-control,
+input.form-control,
+input {
+    color: #fff;
+}
+
+textarea.form-control:focus,
+input.form-control:focus,
+input:focus {
+    color: #fff;
+    border-color: $orange;
+    background: transparent;
+    box-shadow: 0 0 0 .25rem rgba(243, 190, 99, .25);
+}
+
+img,
+svg {
+    position: relative;
+    z-index: 1000;
+}
+
+.formReview form :nth-child(5),
+.formReview form :nth-child(6){
+    display: none;
+}

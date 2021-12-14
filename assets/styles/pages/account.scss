@@ -1,0 +1,21 @@
+.account{
+    min-height: 50vh;
+
+    h2 {
+        opacity: .8;
+        color:transparent;
+        -webkit-text-stroke: 1px $white;
+        
+    }
+
+    .image {
+        opacity: .8;
+    }
+
+    .container {
+        ul{
+            border-left: 1px solid $orange;
+        }
+    }
+
+}

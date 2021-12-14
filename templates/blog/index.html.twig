@@ -1,9 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
-    {{ parent() }} - Blog
-{% endblock %}
+{% block title %} {{ parent() }} - Notre solution {% endblock %}
 
 {% block body %}
+    <section class="blog wrapper">
 
+        {% for article in articles %}
+        <article class="justify-content-between mx-2 mb-3">
+
+            <div class="articleContent d-flex flex-column justify-content-between col-md-7">
+
+                <div class="articleHeader d-flex justify-content-between">
+                    <h2 class="fs-2">{{ article.title }} </h2>
+                    <p class="align-self-end secondaryText">{% trans %}le {% endtrans %}{{ article.createdAt|date("d/m/Y") }}</p>
+                </div>
+
+                <p>
+                    {{ article.content|slice(0, 450) ~ '...' }}
+                </p>
+
+                <a href="{{ path('article_show', {'slug': article.slug}) }}" class="colorOrange">{% trans %}Lire la suite{% endtrans %}</a>
+
+            </div>
+
+            <div class="articleImage col-md-4 p-2">
+                <img class="img-fluid" src="uploads/{{ article.poster }}" alt="{{ article.title }}">
+            </div>
+
+        </article>
+        {% endfor %}
+            {{ knp_pagination_render(articles) }}
+    </section>
 {% endblock %}

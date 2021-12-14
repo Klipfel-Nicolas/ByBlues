@@ -1,0 +1,45 @@
+{% extends "admin/baseAdmin.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Blog
+{% endblock title %}
+
+{% block body %}
+<section class="wrapper">
+  <h1 class="text-center">
+    {% trans %}Section article{% endtrans %}
+  </h1>
+
+  <div class="my-3">
+    <a class="btn btn-warning" href="{{ path("article_new") }}">
+      {% trans %}Ajouter un article{% endtrans %}
+    </a>
+  </div>
+
+  <table class="wrapper border border-2">
+          <thead>
+            <tr class="text-uppercase text-center">
+                <th>{% trans %}Titre{% endtrans %}</th>
+                <th>{% trans %}Contenu{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+    <tbody>
+      {% for article in articles %}
+        <tr>
+          <td class="text-center py-3 px-5">
+            {{ article.title }}
+          </td>
+          <td class="text-center">
+            {{ article.content|slice(0, 100) ~ "..." }}
+          </td>
+          <td class="d-flex">
+            <a class="d-block my-2 mx-2 btn btn-primary" href="{{ path('article_show', {'slug': article.slug}) }}" >{% trans %}Détails{% endtrans %}</a>
+            <a class="d-block my-2 mx-2 btn btn-warning" href="{{ path('article_edit', {'slug': article.slug}) }}" >{% trans %}Modifier{% endtrans %}</a>
+            <span class="py-2 mx-2">{{ include('article/_delete_form.html.twig') }}</span>
+          </td>
+        </tr>
+      {% endfor %}
+      <tbody></table>
+</section>
+    {% endblock body %}

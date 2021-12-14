@@ -1,6 +1,16 @@
-@import 'variables.scss';
-@import "custom";
-@import "~bootstrap/scss/bootstrap";
-body {
-    background-color: $blue-light;
-}
+@import "~bootstrap";
+@import 'variables';
+@import 'class';
+@import "general";
+@import "components/modal.scss";
+@import "components/navBar.scss";
+@import "components/widget";
+@import "components/rating";
+@import "components/footer";
+@import "pages/home.scss";
+@import "pages/blog.scss";
+@import "pages/shop.scss";
+@import "pages/account.scss";
+@import "pages/solution.scss";
+@import "pages/about.scss";
+@import "responsive.scss";

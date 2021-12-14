@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+
+    <body>
+      <trans-unit id="mk1hwhx" resname="Test user modified">
+        <source>Test user modified</source>
+        <target>Test user modified</target>
+      </trans-unit>
+      <trans-unit id="QLeNDdM" resname="Retour à la liste">
+        <source>Retour à la liste</source>
+        <target>Back to list</target>
+      </trans-unit>
+      <trans-unit id="d1jkhIP" resname="éditer">
+        <source>éditer</source>
+        <target>edit</target>
+      </trans-unit>
+      <trans-unit id="juojpGE" resname="Liste des articles">
+        <source>Liste des articles</source>
+        <target>Article list</target>
+      </trans-unit>
+      <trans-unit id="nGAo9GZ" resname="Créer nouveau">
+        <source>Créer nouveau</source>
+        <target>Create new</target>
+      </trans-unit>
+      <trans-unit id="KqDrLO9" resname="Editer l'article">
+        <source>Editer l'article</source>
+        <target>Edit article</target>
+      </trans-unit>
+      <trans-unit id="b68_iN1" resname="Editer un article">
+        <source>Editer un article</source>
+        <target>Edit article</target>
+      </trans-unit>
+      <trans-unit id="CudkuD9" resname="Retourner à la liste des articles">
+        <source>Retourner à la liste des articles</source>
+        <target>Back to article list</target>
+      </trans-unit>
+      <trans-unit id=".EL7OjQ" resname="Ajouter un article">
+        <source>Ajouter un article</source>
+        <target>Add article</target>
+      </trans-unit>
+      <trans-unit id="KPRXHyi" resname="Mon compte">
+        <source>Mon compte</source>
+        <target>My account</target>
+      </trans-unit>
+      <trans-unit id="iuxzTdp" resname="Vous n'êtes pas connecté">
+        <source>Vous n'êtes pas connecté</source>
+        <target>You are not logged in</target>
+      </trans-unit>
+      <trans-unit id="V44TQ.b" resname="Pour créer un compte cliquez ici">
+        <source>Pour créer un compte cliquez ici</source>
+        <target>To create an account, click here</target>
+      </trans-unit>
+      <trans-unit id="nqhO4sj" resname="Créer mon compte">
+        <source>Créer mon compte</source>
+        <target>Create account</target>
+      </trans-unit>
+      <trans-unit id="CsPSyzA" resname="Se connecter">
+        <source>Se connecter</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="DL02fX6" resname="Deconnexion">
+        <source>Deconnexion</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="YdaVBBA" resname="Connexion">
+        <source>Connexion</source>
+        <target>Connection</target>
+      </trans-unit>
+      <trans-unit id="sIyZtOF" resname="Crée un compte">
+        <source>Crée un compte</source>
+        <target>Create account</target>
+      </trans-unit>
+      <trans-unit id="lHfRy_N" resname="Bienvenue sur le site bye blue">
+        <source>Bienvenue sur le site bye blue</source>
+        <target>Welcome to ByeBlues website</target>
+      </trans-unit>
+      <trans-unit id="f3n8wi4" resname="Site réalisé à l'aide de la Wild Code School de Strasbourg.&#10;        Pour notre client &quot;Bye Blues&quot; fait avec amour.">
+        <source>Site réalisé à l'aide de la Wild Code School de Strasbourg. Pour notre client "Bye Blues" fait avec amour.</source>
+        <target>Website created by Wild Code School of Strasbourg. For our client "Bye Blues". Done with love</target>
+      </trans-unit>
+      <trans-unit id="fq1n5z5" resname="Notre solution">
+        <source>Notre solution</source>
+        <target>Our solution</target>
+      </trans-unit>
+      <trans-unit id="KyZR9lw" resname="A Propos">
+        <source>A Propos</source>
+        <target>About</target>
+      </trans-unit>
+      <trans-unit id="jGvAmVN" resname="Blog">
+        <source>Blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit id="K7iKgAf" resname="Boutique">
+        <source>Boutique</source>
+        <target>Shop</target>
+      </trans-unit>
+      <trans-unit id="tUKhz_F" resname="connexion">
+        <source>connexion</source>
+        <target>Connection</target>
+      </trans-unit>
+      <trans-unit id="U8rIzBT" resname="Ecrit le">
+        <source>Ecrit le</source>
+        <target>Written the</target>
+      </trans-unit>
+      <trans-unit id="LkrYGJ4" resname="Créer un article">
+        <source>Créer un article</source>
+        <target>Create article</target>
+      </trans-unit>
+      <trans-unit id="3cLp7gJ" resname="j'espère etre pris !">
+        <source>j'espère etre pris !</source>
+        <target>Write for !</target>
+      </trans-unit>
+      <trans-unit id="xGWsLuh" resname="Lire la suite">
+        <source>Lire la suite</source>
+        <target>Read more</target>
+      </trans-unit>
+      <trans-unit id="LbZPW_H" resname="Créer votre nouvel article">
+        <source>Créer votre nouvel article</source>
+        <target>Create your new article</target>
+      </trans-unit>
+      <trans-unit id="JmayRbm" resname="Mon nom">
+        <source>Mon nom</source>
+        <target>My lastname</target>
+      </trans-unit>
+      <trans-unit id="S5l9eSo" resname="Mon prénom">
+        <source>Mon prénom</source>
+        <target>My firstname</target>
+      </trans-unit>
+      <trans-unit id="j2qdIK_" resname="Mon email">
+        <source>Mon email</source>
+        <target>My email</target>
+      </trans-unit>
+      <trans-unit id="H6T.Zud" resname="Mon addresse">
+        <source>Mon addresse</source>
+        <target>My adresse</target>
+      </trans-unit>
+      <trans-unit id="iMFM59N" resname="Vous n'avez pas encore d'adresse de renseignée">
+        <source>Vous n'avez pas encore d'adresse de renseignée</source>
+        <target>No address specified</target>
+      </trans-unit>
+      <trans-unit id="cO7SJXl" resname="Mon password">
+        <source>Mon password</source>
+        <target>My password</target>
+      </trans-unit>
+      <trans-unit id="B14mjBc" resname="Un problème avec vos informations ? Pour les modifiers c'est par">
+        <source>Un problème avec vos informations ? Pour les modifiers c'est par</source>
+        <target>Informations problem ? Modify them</target>
+      </trans-unit>
+      <trans-unit id="rxM.HDO" resname="ici">
+        <source>ici</source>
+        <target>here</target>
+      </trans-unit>
+      <trans-unit id="x254g.d" resname="Ma commande">
+        <source>Ma commande</source>
+        <target>My order</target>
+      </trans-unit>
+      <trans-unit id="._vK_ow" resname="Nom du produit">
+        <source>Nom du produit</source>
+        <target>Product name</target>
+      </trans-unit>
+      <trans-unit id="KWZK4Vm" resname="Prix du produit">
+        <source>Prix du produit</source>
+        <target>Product price</target>
+      </trans-unit>
+      <trans-unit id="OTJ.acu" resname="Description du produit">
+        <source>Description du produit</source>
+        <target>Product description</target>
+      </trans-unit>
+      <trans-unit id="AXuvilV" resname="Total de mon panier">
+        <source>Total de mon panier</source>
+        <target>Total price</target>
+      </trans-unit>
+      <trans-unit id="L5.Z3_S" resname="Edition de mon profil">
+        <source>Edition de mon profil</source>
+        <target>Edit my profile</target>
+      </trans-unit>
+      <trans-unit id="yPtT15Y" resname="Changer mon mot de passe">
+        <source>Changer mon mot de passe</source>
+        <target>Change my password</target>
+      </trans-unit>
+      <trans-unit id="S0wUoJy" resname="Site réalisé à l'aide de la Wild Code School de Strasbourg.&#10;                Pour notre client &quot;Bye Blues&quot; fait avec amour.">
+        <source>Site réalisé à l'aide de la Wild Code School de Strasbourg. Pour notre client "Bye Blues" fait avec amour.</source>
+        <target>Website created by Wild Code School of Strasbourg. For our client "Bye Blues". Done with love</target>
+      </trans-unit>
+      <trans-unit id="b.1JhwV" resname="Mon panier">
+        <source>Mon panier</source>
+        <target>My cart</target>
+      </trans-unit>
+      <trans-unit id="0egowWb" resname="Liste des produits disponible">
+        <source>Liste des produits disponible</source>
+        <target>List of available products</target>
+      </trans-unit>
+      <trans-unit id="VMMk9sE" resname="Prix">
+        <source>Prix</source>
+        <target>Price</target>
+      </trans-unit>
+      <trans-unit id="lYzRdkZ" resname="Aucune addresse renseignée">
+        <source>Aucune addresse renseignée</source>
+        <target>No address specified</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

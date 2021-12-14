@@ -1,0 +1,48 @@
+.widgetBar {
+    position: fixed;
+    z-index: 3000;
+    height: 80vh;
+    width: 5vw;
+    min-width: 45px;
+    top: 10vh;
+    right: 0;
+    text-align: center;
+}
+
+.widgetBar p {
+    font-size: .8rem;
+}
+
+.language {
+    height: 40%;
+}
+
+.language p {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.widgetBar .svg {
+    width: 40px;
+    height: auto;
+}
+
+.widgetBar .svg path {
+    stroke-width: 145;
+}
+
+.eng .svg path {
+    stroke-width: 30;
+}
+
+.widgetBar .svg path {
+    stroke: grey;
+}
+
+.widgetBar .svg:hover path {
+    stroke: $white;
+}
+
+.widgetBar .map.active .svg path {
+    stroke: $salmon;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ parent() }} ItemShow {% endblock %}
+
+{% block body %}
+    <div class="border border-warning text-center mx-auto w-50">
+        <h1 class="border border-white">{{ item.name }}</h1>
+        <div>
+            <img src="http://placehold.it/350x150" alt="image d'un article">
+            <p>{{ item.description }}</p>
+            <p>{% trans %}Prix{% endtrans %} {{ item.price }}€</p>
+        </div>
+        <div>
+            <a href="{{ path('user_item_add', {'id': item.id}) }}" class="btn btn-warning">Ajouter au panier</a>
+        </div>
+    </div>
+{% endblock %}

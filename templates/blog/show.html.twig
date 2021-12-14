@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <article class="col-8 mx-auto p-5 text-center bg-light bg-gradient border-3 rounded-3">
+        <h2 class="text-dark text-decoration-underline">{{ article.title }}</h2>
+        <div class="text-dark">{% trans %} Ecrit le {% endtrans %} 16/06/2021</div>
+        <div class="content">
+            <img src="http://placehold.it/350x150" alt="imgarticle">
+            <p class="text-dark">
+                {{ article.content|raw }}
+            </p>
+            <a class="nav-link" aria-current="page" href="{{ path('blog') }}">Retour à la liste</a>
+        </div>
+        <div class="count">
+            {{ pagination.getTotalItemCount }}
+        </div>
+        <table>
+            <tr>
+                {# sorting of properties based on query components #}
+                <th>{{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</th>
+                <th{% if pagination.isSorted('a.Title') %} class="sorted"{% endif %}>
+                    {{ knp_pagination_sortable(pagination, 'Title', 'a.title') }}
+                </th>
+                <th{% if pagination.isSorted(['a.date', 'a.time']) %} class="sorted"{% endif %}>
+                    {{ knp_pagination_sortable(pagination, 'Release', ['a.date', 'a.time']) }}
+                </th>
+            </tr>
+
+            {# table body #}
+            {% for article in pagination %}
+                <tr {% if loop.index is odd %}class="color"{% endif %}>
+                    <td>{{ article.id }}</td>
+                    <td>{{ article.title }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        {# display navigation #}
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </article>
+{% endblock %}

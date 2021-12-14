@@ -1,0 +1,52 @@
+{% extends 'admin/baseAdmin.html.twig' %}
+
+{% block title %}{{ parent() }} - Items {% endblock %}
+
+{% block body %}
+    <h1 class="text-center my-5">Liste des produits disponibles</h1>
+
+
+    <button type="button" class="d-block mx-auto btn btn-warning my-5">
+        <a href="{{ path('admin_item_newItem') }}"> {% trans %}Ajouter un nouveau produit{% endtrans %}</a>
+    </button>
+
+
+
+    <table class="wrapper border border-2">
+        <thead>
+            <tr class="text-uppercase text-center">
+                <th>{% trans %}Nom{% endtrans %}</th>
+                <th>{% trans %}Prix{% endtrans %}</th>
+                <th>{% trans %}Affiché par jour{% endtrans %}</th>
+                <th>{% trans %}Quantité disponible{% endtrans %}</th>
+                <th>{% trans %}En commande{% endtrans %}</th>
+                <th>{% trans %}Description{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+            <tr class="text-center border">
+
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }} €</td>
+                <td>{{ item.displayPerDay }}</td>
+                <td>{{ item.quantityAviable }}</td>
+                <td>{{ item.isPreOrder ? 'Yes' : 'No' }}</td>
+                <td>{{ item.description|slice(0, 50) ~ "..." }}</td>
+                <td>
+                    <a class="d-block my-2 mx-2 btn btn-primary" href="{{ path('admin_item_show', {'id': item.id}) }}">{% trans %}Détails{% endtrans %}</a>
+                    <a class="d-block my-2 mx-2 btn btn-warning" href="{{ path('admin_item_edit', {'id': item.id}) }}">{% trans %}Modifier{% endtrans %}</a>
+                    {{ include('admin/produit/_delete_form.html.twig') }}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

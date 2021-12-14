@@ -4,7 +4,7 @@ Projet pour une start-up Strasbourgeoise.
 
 ## Description
 
-Le projet site est composé : 
+Le site est composé : 
 - D'une page de présentation du projet et du produit
 - D'un blog afin de partager des articles scientifiques ou sociologiques
 - D'une boutique en ligne pour commander le produits

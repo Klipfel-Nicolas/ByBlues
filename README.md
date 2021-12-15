@@ -29,6 +29,8 @@ bdd mySql |
 La boutique      |  Le pannier
 :-------------------------:|:-------------------------:
 ![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/boutique.gif) | ![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/pannier.gif)
+:-------------------------:|:-------------------------:
+Mise à jour en direct du statut avec le nombre total d'items | Suppression d'un item avec calcul immédiat du nouveau montant total
 
 La commande (sans système de payement)
 

@@ -7,11 +7,19 @@ Bye Blues  offre une solution inspirée d’études scientifiques récentes. En 
 ## Description
 
 Le site est composé : 
-- D'une page de présentation du projet et du produit
+- D'une page de présentation du produit et du projet Bye blues
 - D'un blog afin de partager des articles scientifiques ou sociologiques
-- D'une boutique en ligne pour commander le produits
+- D'une boutique en ligne pour commander le produit
 - D'une partie Admin
 - D'un système d'authentification sign-in, log-in/log-out
+
+### La base de donnée
+
+uml | base de donné mySql
+
+### La boutique en ligne
+
+
 
 
 ## Construit avec

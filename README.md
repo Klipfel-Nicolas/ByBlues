@@ -46,7 +46,7 @@ Accueil Admin     |  Admin blog
 :-------------------------:|:-------------------------:
 ![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/admin.png) | ![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/adminBlog.png)
 
-## Construit avec
+## Outils
 
 * [Symfony](https://github.com/symfony/symfony)
 * [GrumPHP](https://github.com/phpro/grumphp)

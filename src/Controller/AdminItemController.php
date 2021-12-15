@@ -99,8 +99,8 @@ class AdminItemController extends AbstractController
                 $iterations = 4;
                 for ($i = 1; $i <= $iterations; $i++) {
                     if ($form['image' . $i]->getData()) {
-                        $removePath = $this->getParameter('item_directory') . '/' . $images[$i - 1]->getPath();
-                        $filesystem->remove($removePath);
+                       /* $removePath = $this->getParameter('item_directory') . '/' . $images[$i - 1]->getPath();
+                        $filesystem->remove($removePath);*/ 
                         $imageFile = $form['image' . $i]->getData();
                         $filePath = uniqid() . $imageFile->getClientOriginalName();
 
@@ -113,9 +113,10 @@ class AdminItemController extends AbstractController
                         $images[$i - 1]->setItem($item);
                         $images[$i - 1]->setImagePlace($i);
                         $entityManager->persist($images[$i - 1]);
+                       
                         $entityManager->flush();
                     }
-                }
+                } 
 
                 return $this->redirectToRoute('admin_item');
             }

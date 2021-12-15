@@ -6,6 +6,14 @@ Bye Blues est une start-up Strasbourgeoise.
 
 Bye Blues  offre une solution inspirée d’études scientifiques récentes. En reproduisant une lumière rouge de 630 nm naturellement présente dans les rayons du soleil, la lampe "bye blues" réduit considérablement les conséquences négatives d'un réveil à éclairages artificiels et favorise ainsi un endormissement plus facile et un sommeil plus réparateur pour un réveil en meilleure forme.
 
+## Technos
+
+#### Front
+![Javascript](https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+#### Back
+![Symfony](https://img.shields.io/badge/symfony-%23000000.svg?style=for-the-badge&logo=symfony&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-025982.svg?style=for-the-badge&logo=mysql&logoColor=white)
+
 ## Description
 
 Le site est composé : 

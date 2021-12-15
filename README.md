@@ -31,9 +31,11 @@ La boutique      |  Le pannier
 ![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/boutique.gif) | ![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/pannier.gif)
 Mise à jour en direct du statut avec le nombre total d'items | Suppression d'un item avec calcul immédiat du nouveau montant total
 
-La commande est stockée dans l'historique des commandes d'un utilisateur dans son espace personnel, avec le détail de celle-ci.
+#### La commande.
 
 ![Alt](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/commande.gif)
+
+La commande est stockée dans l'historique des commandes d'un utilisateur dans son espace personnel, avec le détail de celle-ci.
 
 
 ## Construit avec

@@ -23,9 +23,13 @@ UML         |  bdd mySql
 
 ### La boutique en ligne
 
-La boutique      |  Le pannier
-:-------------------------:|:-------------------------:
-![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/boutique.gif) | ![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/pannier.gif)
+La boutique      |  
+:-------------------------:|
+![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/boutique.gif) | 
+
+Le pannier |
+:-------------------------:|
+![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/pannier.gif) |
 
 La commande (sans système de payement)
 

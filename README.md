@@ -17,19 +17,18 @@ Le site est composé :
 
 ### La base de donnée
 
-UML         |  bdd mySql
-:-------------------------:|:-------------------------:
-![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/BDD-byBlues.png) | ![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/bdd.png)
+UML         |  
+:-------------------------:|
+![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/BDD-byBlues.png) | 
+bdd mySql |
+:-------------------------:|
+![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/bdd.png) |
 
 ### La boutique en ligne
 
-La boutique      |  
-:-------------------------:|
-![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/boutique.gif) | 
-
-Le pannier |
-:-------------------------:|
-![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/pannier.gif) |
+La boutique      |  Le pannier
+:-------------------------:|:-------------------------:
+![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/boutique.gif) | ![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/pannier.gif)
 
 La commande (sans système de payement)
 

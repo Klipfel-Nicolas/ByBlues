@@ -38,6 +38,14 @@ Mise à jour en direct du statut avec le nombre total d'items | Suppression d'un
 La commande est stockée dans l'historique des commandes d'un utilisateur dans son espace personnel, avec le détail de celle-ci.
 
 
+### La partie Admin
+
+La partie Admin a été pensée de façon à permettre aux fondatrices de la start-up de gérer tout le contenu (articles, produits, tags), les commandes, les interactions utilisateurs, en toute autonomie sans avoir besoin de l'intervention d'un développeur.
+
+Accueil Admin     |  Admin blog
+:-------------------------:|:-------------------------:
+![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/admin.png) | ![](https://github.com/Klipfel-Nicolas/ByBlues/blob/master/assets/imageReadme/adminBlog.png)
+
 ## Construit avec
 
 * [Symfony](https://github.com/symfony/symfony)
